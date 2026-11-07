@@ -1,26 +1,41 @@
 ﻿using System;
-class Student
-
-{
-    public int RollNo { get; set; }
-    public string Name { get; set; }
-    public Student(int r, string n)
-    {
-        RollNo = r;
-        Name = n;
-    }
-    public void Display()
-    {
-        Console.WriteLine("Roll No:" + RollNo + ", Name:" + Name);
-    }
-}
 class Program
 {
     static void Main()
     {
-        Student s1 = new Student(101, "Rahul");
-        Student s2 = new Student(102, "Sneha");
-        s1.Display();
-        s2.Display();
+        int marks = 75;
+        // Branching
+        if (marks >= 60)
+            Console.WriteLine("Result: First Class");
+        else
+            Console.WriteLine("Result: Second Class");
+        char op = '+';
+        switch (op)
+        {
+            case '+':
+                Console.WriteLine("Operation: Addition"); break;
+            case '-':
+                Console.WriteLine("Operation: Subtraction"); break;
+            default:
+                Console.WriteLine("Invalid"); break;
+        }
+        // For Loop
+        Console.Write("For Loop: ");
+        for (int i = 1; i <= 5; i++)
+            Console.Write(i + " ");
+        // While Loop
+        Console.Write("\nWhile Loop (Even): ");
+        int w = 2;
+        while (w <= 6)
+        {
+            Console.Write(w + " ");
+            w += 2;
+        }
+        // Foreach Loop
+        Console.Write("\nForeach Array: ");
+        int[] arr = { 10, 20, 30 };
+        foreach (int val in arr)
+            Console.Write(val + " ");
+        Console.WriteLine();
     }
 }
